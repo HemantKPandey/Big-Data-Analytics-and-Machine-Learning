@@ -1,0 +1,374 @@
+*********************
+Exercises on vectors
+04/01/2019
+*********************
+
+Question 1:
+The following command creates a vector, z.
+	z<- c(45,56,78)
+
+But can you also name each element of vector, for example, as below:
+	z<- c(a=45, b=56,c=78)
+
+Answer1:  Yes, it will be read as below :
+> z<- c(45,56,78)
+> z
+[1] 45 56 78
+>   z<- c(a=45, b=56,c=78)
+> z
+ a  b  c 
+45 56 78
+
+Question 2:
+Is it necessary that the naming label be within quotes? Which of the
+following is correct, or both are:
+
+	x<- c(abc="AB", cde= "FF", hh = "dsf")
+	OR?
+	x<- c("abc"="AB", "cde"= "FF", "hh" = "dsf")
+
+Answer:both are correct, naming labels may be and may not be within Quotes
+
+Question 3:
+In R or RStudio, type:
+	example(data.frame)
+
+And you get lots of examples on data.frame command. Where do you
+think the examples are coming from?
+
+Answer: Examples are coming from Description file from R Base package
+
+
+Question 4: 
+You can install many of the software from within R. Perform the following steps to
+download Rtools.exe and install it on your machine. Rtools.exe is used to compile
+R packages available in sourcecode form.
+
+	install.packages("installr")
+	library(installr)
+	install.Rtools()
+Answer : Package: installr has been successfully installed	by first command.
+			Library of Installr is loaded by second command.
+			3rd command tries to download and install Rtools and related packages and libraries: which was aborted, since I have already have the same version of Rtools already installed.
+Log files for the execustion of the 3 commands is as below :
+
+[> install.packages("installr")
+Installing package into ‘C:/Users/abhem/Documents/R/win-library/3.5’
+(as ‘lib’ is unspecified)
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/installr_0.21.0.zip'
+Content type 'application/zip' length 335953 bytes (328 KB)
+downloaded 328 KB
+
+package ‘installr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+        C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV\downloaded_packages
+> library(installr)
+Loading required package: stringr
+
+Welcome to installr version 0.21.0
+
+More information is available on the installr project website:
+https://github.com/talgalili/installr/
+
+Contact: <tal.galili@gmail.com>
+Suggestions and bug-reports can be submitted at: https://github.com/talgalili/installr/issues
+
+                        To suppress this message use:
+                        suppressPackageStartupMessages(library(installr))
+
+> 
+> install.Rtools()
+Loading required namespace: devtools
+Failed with error:  ‘there is no package called ‘devtools’’
+Loading required package: htmltab
+Installing package into ‘C:/Users/abhem/Documents/R/win-library/3.5’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘curl’, ‘jsonlite’, ‘mime’, ‘openssl’, ‘XML’, ‘httr’
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/curl_3.2.zip'
+Content type 'application/zip' length 2986318 bytes (2.8 MB)
+downloaded 2.8 MB
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/jsonlite_1.6.zip'
+Content type 'application/zip' length 1160648 bytes (1.1 MB)
+downloaded 1.1 MB
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/mime_0.6.zip'
+Content type 'application/zip' length 47809 bytes (46 KB)
+downloaded 46 KB
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/openssl_1.1.zip'
+Content type 'application/zip' length 3937318 bytes (3.8 MB)
+downloaded 3.8 MB
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/XML_3.98-1.16.zip'
+Content type 'application/zip' length 4600112 bytes (4.4 MB)
+downloaded 4.4 MB
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/httr_1.4.0.zip'
+Content type 'application/zip' length 496765 bytes (485 KB)
+downloaded 485 KB
+
+trying URL 'https://mirrors.nics.utk.edu/cran/bin/windows/contrib/3.5/htmltab_0.7.1.zip'
+Content type 'application/zip' length 99020 bytes (96 KB)
+downloaded 96 KB
+
+package ‘curl’ successfully unpacked and MD5 sums checked
+package ‘jsonlite’ successfully unpacked and MD5 sums checked
+package ‘mime’ successfully unpacked and MD5 sums checked
+package ‘openssl’ successfully unpacked and MD5 sums checked
+package ‘XML’ successfully unpacked and MD5 sums checked
+package ‘httr’ successfully unpacked and MD5 sums checked
+package ‘htmltab’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+        C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV\downloaded_packages
+Loading required package: htmltab
+No encoding supplied: defaulting to UTF-8.
+Argument 'which' was left unspecified. Choosing first table.
+Neither <thead> nor <th> information found. Taking first table row for the header. If incorrect, specifiy header argument.
+Please remember you are using:  R version 3.5.2 (2018-12-20) 
+trying URL 'https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe'
+Content type 'application/x-msdos-program' length 108622512 bytes (103.6 MB)
+downloaded 103.6 MB
+
+
+The file was downloaded successfully into:
+ C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV/Rtools35.exe 
+
+Running the installer now...
+
+Installation status:  FALSE . Removing the file:
+ C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV/Rtools35.exe 
+ (In the future, you may keep the file by setting keep_install_file=TRUE) 
+Warning message:
+In shell(install_cmd, wait = wait, ...) :
+  'C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV/Rtools35.exe' execution failed with error code 1]
+	
+Question 5:
+After you have performed Q 4 above, execute following commands:
+
+	library(installr)
+	installr()
+
+A window appears to show you what all can be installed. Install NppToR.
+With NppToR, you can issue all R-commands directly from notepad++.
+
+Answer
+[> installr()
+Please wait a moment while downloading (you may not see R respond for half a minute)
+ 
+The file was downloaded successfully into:
+ C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV/NppToR-2.7.0.exe 
+
+Running the installer now...
+
+Installation status:  TRUE . Removing the file:
+ C:\Users\abhem\AppData\Local\Temp\RtmpIz5evV/NppToR-2.7.0.exe 
+ (In the future, you may keep the file by setting keep_install_file=TRUE) ]
+
+Question 6:
+For many packages (not commands), R has extensive documentation available
+on your machine. Type the following command and  write randomly three packages
+on which vignettes are available:
+
+	vignette()
+
+	Answer : Vignette are available in ‘corrplot’ , ‘dplyr’ , ‘utils’
+	
+Question7:
+Some of the vignettes are quite detailed and yet simple. For example,
+install packages: 'nycflights13' and 'dplyr'. Execute few examples provided
+in the following vignette:
+
+	vignette('dplyr')
+
+Package, dplyr, is very useful for data manipulation
+
+Answer: > vignette('dplyr')
+starting httpd help server ... done
+The command opens the detailed help of Package and its description in html rendering any editing or modification
+
+Question 8:
+What is the result of following function:
+	cos(c(0, pi, pi/4, pi/2, pi))
+
+What do you conclude from the results?
+Answer : 
+> cos(c(0, pi, pi/4, pi/2, pi))
+[1]  1.000000e+00 -1.000000e+00  7.071068e-01  6.123032e-17 -1.000000e+00
+
+The Value of Cosine function corresponding to the value of Angle in the vector.
+
+Question 9:
+In R, even a scalar is a vector. Try:
+
+	d<-7
+	class(d)
+
+What is the output?
+Answer: The scalar is stored as Vector fo single row and single column
+>   d<-7
+> d
+[1] 7
+> class(d)
+[1] "numeric"
+
+The Class of the scalar is Numeric
+
+Question 10:
+R supoorts four special numeric values: Inf, -Inf, NaN and NA .
+	Inf : Infinity
+	-Inf: Minus infinity
+	NaN : Not a number
+	NA : missing value.
+Now perform the following operations:
+
+	c(Inf + 1, -Inf +1, Inf - Inf)
+	c(1/Inf, Inf/1, Inf/Inf)
+	c(sqrt(Inf), sin(Inf))
+	c(NA + NA, NA + NaN, NaN + NA, NaN + NaN)
+What answers you get? Are they expected?
+
+Answer:
+> c(Inf + 1, -Inf +1, Inf - Inf)
+[1]  Inf -Inf  NaN
+> c(1/Inf, Inf/1, Inf/Inf)
+[1]   0 Inf NaN
+> c(sqrt(Inf), sin(Inf))
+[1] Inf NaN
+Warning message:
+In sin(Inf) : NaNs produced
+> c(NA + NA, NA + NaN, NaN + NA, NaN + NaN)
+[1]  NA  NA NaN NaN
+upto command 3 the results were expected but for the fourth one, The result is not expected as it is not in conjunction with commutative law of addition
+
+Question 11:
+Logical vectors has following operators:
+ !   is used for not
+ &   is used for and
+ |   is used for or
+
+Generate two logical vectors, x and y as follows:
+x <- 1:10 >= 5
+y <- 1:10 %% 2 == 0    # %% returns the remainder from division
+
+Now answer the results of following:
+	!x
+	x & y
+	x | y
+Answer :
+!x should come as 1,2,3,4
+>   !x
+ [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE
+x & y should come as 6,8,10
+> x & y
+ [1] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE  TRUE
+x | y should give 2,4,5,6,7,8,9,10
+> x | y
+ [1] FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+
+Question 12:
+Create following variables:
+	xrt <- c(1,2,3)
+	try <- c(3,4,5)
+Remove from memory ONLY these two variables with rm() command.
+
+Answer:
+> #  Create following variables:
+>   xrt <- c(1,2,3)
+> try <- c(3,4,5)
+> ls()
+ [1] "d"   "d.0" "d0"  "d00" "dd"  "fac" "L3"  "try" "x"   "xrt" "y"   "z"  
+> rm(xrt,try)
+> ls()
+ [1] "d"   "d.0" "d0"  "d00" "dd"  "fac" "L3"  "x"   "y"   "z"
+ 
+Question 13:
+Do factors help in reducing memory usgae? Try the following:
+
+	z<-rep(c("abc", "cde"), 1000)
+	z
+	object.size(z)
+	zz <- as.factor(z)
+	object.size(zz)
+
+What is your answer?
+
+Answer: Yes, when fectors help inreducing the memory size.
+>   z<-rep(c("abc", "cde"), 1000)
+> z
+   [1] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+  [17] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+  [33] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+  [49] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+  [65] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+  [81] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+  [97] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [113] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [129] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [145] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [161] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [177] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [193] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [209] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [225] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [241] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [257] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [273] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [289] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [305] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [321] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [337] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [353] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [369] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [385] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [401] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [417] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [433] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [449] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [465] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [481] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [497] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [513] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [529] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [545] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [561] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [577] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [593] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [609] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [625] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [641] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [657] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [673] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [689] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [705] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [721] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [737] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [753] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [769] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [785] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [801] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [817] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [833] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [849] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [865] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [881] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [897] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [913] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [929] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [945] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [961] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [977] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [993] "abc" "cde" "abc" "cde" "abc" "cde" "abc" "cde"
+ [ reached getOption("max.print") -- omitted 1000 entries ]
+> object.size(z)
+16160 bytes
+> zz <- as.factor(z)
+> object.size(zz)
+8560 bytes
+
+
+
