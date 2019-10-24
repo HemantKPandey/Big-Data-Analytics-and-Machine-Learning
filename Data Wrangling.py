@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+## This excercise is to perform different data Wrangling activities on data, using Python.
+
 """
 Spyder Editor
 
