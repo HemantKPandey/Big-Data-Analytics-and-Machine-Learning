@@ -2,13 +2,13 @@
 """
 Created on Sun Feb 10 17:12:49 2019
 
-@author: ashok
+@author:Hemant Pandey
 """
 
 # -*- coding: utf-8 -*-
 """
 ## Last amended: 4th July, 2018
-## My folder: C:\Users\ashokharnal\OneDrive\Documents\cluster_analysis
+## My folder: D:\\data\\OneDrive\\Documents\\cluster_analysis
 ## R file: quantization_image.R
 ## Colour quantization:
 ## http://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html#sphx-glr-auto-examples-cluster-plot-color-quantization-py
@@ -19,7 +19,7 @@ Created on Sun Feb 10 17:12:49 2019
 ##
 ## Objective:
 ##           To reduce no of colours in a colour palette
-##           using k-means
+##           using k-means, That will enhence reducing memory use for storage and archiving purpose.
 
 ## Steps:
 #             1. Read any image (skimage.imread)
