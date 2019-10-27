@@ -1,5 +1,5 @@
 *********************
-Exercises on vectors
+This Excercise is to perform basic R commands to perform Operations for analysis and Visualization and Wrangling of data using R Studio.
 04/01/2019
 *********************
 
